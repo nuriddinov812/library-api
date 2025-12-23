@@ -17,3 +17,4 @@ sqlparse==0.5.5
 unicorn==2.1.4
 uritemplate==4.2.0
 urllib3==2.6.2
+whitenoise==6.11.0
