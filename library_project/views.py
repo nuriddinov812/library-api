@@ -6,6 +6,8 @@ from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 
@@ -101,3 +103,9 @@ class BookDeleteUpdateApiView(generics.RetrieveUpdateDestroyAPIView):
     
     
 
+
+# Yuqoridagi hamma viewlar bitta viewsetda
+class BookViewSet(viewsets.ModelViewSet):
+    queryset = Books.objects.all()
+    serializer_class = BookSerializer
+    # crud uchun asosan create,retrieve,update,delete uchun
